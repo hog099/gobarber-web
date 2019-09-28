@@ -6,13 +6,13 @@ import { Route, Redirect } from 'react-router-dom';
 import AuthLayout from '~/pages/_layouts/auth/index';
 import Defaultlayout from '~/pages/_layouts/default/index';
 
-import store from '~/store/index';
+import {store} from '~/store/index';
 
 export default function RouteWrapper(
     {
         component: Component,
         isPrivate,
-        ... rest
+        ...rest
     }
 ) {
     const {signed} = store.getState().auth;
